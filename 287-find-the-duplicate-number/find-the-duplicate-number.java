@@ -4,13 +4,13 @@ class Solution {
         HashSet<Integer> set=new HashSet<>();
         for(int num:nums)
         {
-            if(!set.contains(num))
+            if(set.contains(num))
             {
-                set.add(num);
-            }
-            else{
                 duplicate=num;
+                break;
             }
+            set.add(num);
+            
             
         }
         return duplicate;
