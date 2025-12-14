@@ -6,13 +6,14 @@ class Solution {
         {
             if(set.contains(num))
             {
-                duplicate=num;
-                break;
+                return num;
+                //duplicate=num;
+                //break;
             }
             set.add(num);
             
             
         }
-        return duplicate;
+        return -1;//return duplicate
     }
 }
