@@ -10,21 +10,11 @@ class Solution {
             {
                 return mid;
             }
-            if(nums[mid]<nums[right])
+            if(nums[mid]>=nums[left])
             {
-                //sorted in right side
-                if(nums[mid]<target&&target<=nums[right])
-                {
-                     left=mid+1;
-                }
-                else
-                {
-                    right=mid-1;
-                }
-            }
-            else 
-            {
-                if(nums[mid]>target&&nums[left]<=target)
+                //sorted in left side
+               
+                 if(nums[mid]>target&&nums[left]<=target)
                 {
                     right=mid-1;
                 }
@@ -33,6 +23,20 @@ class Solution {
                     left=mid+1;
                 }
                
+            }
+            
+            else 
+            {
+                 if(nums[mid]<target&&target<=nums[right])
+                {
+                          left=mid+1;
+                }
+                else
+                {
+                   
+                        right=mid-1;
+            
+                }
             }
         }
         return -1;
