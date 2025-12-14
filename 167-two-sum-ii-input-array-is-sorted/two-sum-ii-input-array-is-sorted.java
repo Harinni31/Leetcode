@@ -1,18 +1,24 @@
 class Solution {
     public int[] twoSum(int[] numbers, int target) {
-        HashMap<Integer,Integer>map=new HashMap<>();
-        int[] a=new int[2];
-        for(int i=0;i<numbers.length;i++)
+        //using two pointers
+        int left=0;
+        int right=numbers.length-1;
+        while(left<right)
         {
-            int complement=target-numbers[i];
-            if(map.containsKey(complement))
+            int sum=numbers[left]+numbers[right];
+            if(sum==target)
             {
-                a[0]=map.get(complement)+1;
-                a[1]=i+1;
+                return new int[]{left+1,right+1};//1-based indexing
             }
-            map.put(numbers[i],i);
-            
+            if(sum>target)
+            {
+                right--;
+            }
+            else
+            {
+                left++;
+            }
         }
-        return a;
+        return new int[0];
     }
 }
