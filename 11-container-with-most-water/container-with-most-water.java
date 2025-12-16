@@ -5,7 +5,7 @@ class Solution {
         
             int left=0;
             int right=n-1;
-            while(right>left)
+            while(left<right)
             {
                 int min=Math.min(height[left],height[right]);
                  maxarea=Math.max(maxarea,(right-left)*min);
