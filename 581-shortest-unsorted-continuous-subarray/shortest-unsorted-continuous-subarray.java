@@ -9,26 +9,25 @@ class Solution {
         {
             if(nums[i]<startpointer)
             {
-                left=i;
+                 right=i;
             }
             else
             {
                 startpointer=nums[i];
             }
         }
-         if(left==-1) return 0;
         for(int i=n-1;i>=0;i--)
         {
             if(nums[i]>endpointer)
             {
-                right=i;
+                 left=i;
             }
             else
             {
                 endpointer=nums[i];
             }
         }
-        
-       return left-right+1; 
+        if(left==-1) return 0;
+       return right-left+1; 
     }
 }
