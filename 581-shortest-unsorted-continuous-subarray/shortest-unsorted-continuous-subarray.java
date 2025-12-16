@@ -16,6 +16,7 @@ class Solution {
                 startpointer=nums[i];
             }
         }
+        if(right==-1) return 0;
         for(int i=n-1;i>=0;i--)
         {
             if(nums[i]>endpointer)
@@ -27,7 +28,6 @@ class Solution {
                 endpointer=nums[i];
             }
         }
-        if(left==-1) return 0;
        return right-left+1; 
     }
 }
