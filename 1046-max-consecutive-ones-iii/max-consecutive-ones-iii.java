@@ -6,7 +6,7 @@ class Solution {
         for(int right=0;right<nums.length;right++)
         {
             if(nums[right]==0) count++;
-            if(count>k)
+            while(count>k)
            {
             if(nums[left]==0) count--;
             left++;
