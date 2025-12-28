@@ -8,24 +8,18 @@ class Solution {
         for(int i=0;i<c.length;i++)
         {
             if(map.containsKey(c[i]))
-            {
-                 if(!map.get(c[i]).equals(str[i]))
-                {
-                    return false;
-                }
-            }
-            else
-            {
-               if(m.containsKey(str[i]))
-               {
-                 if(!m.get(str[i]).equals(c[i]))
-                {
-                    return false;
-                }
-               }
-            }
+             { if(!map.get(c[i]).equals(str[i])) 
+             { return false; } 
+            } 
+             if(m.containsKey(str[i])) 
+             { if(!m.get(str[i]).equals(c[i])) 
+             { return false; }
+              } 
+               
             map.put(c[i],str[i]);
             m.put(str[i],c[i]);
+            
+          
         }
         return true;
     }
