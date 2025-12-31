@@ -4,7 +4,7 @@ class Solution {
         for(int i=0;i<s.length();i++)
         {
             char ch=s.charAt(i);
-            if(!sb.isEmpty() && sb.charAt(sb.length()-1)==ch)
+            if(sb.length()>0 && sb.charAt(sb.length()-1)==ch)
             {
                 sb.deleteCharAt(sb.length()-1);
             }
