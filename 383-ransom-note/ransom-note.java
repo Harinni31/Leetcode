@@ -1,7 +1,22 @@
 class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
-        HashMap<Character,Integer> map=new HashMap<>();
-      
+        int freq[]=new int[26];
+        for(int i=0;i<magazine.length();i++)
+        {
+            char c=magazine.charAt(i);
+            freq[c-'a']++;
+        }
+        for(int i=0;i<ransomNote.length();i++)
+        {
+            char c=ransomNote.charAt(i);
+            if(freq[c-'a']==0)
+            {
+                return false;
+            }
+            freq[c-'a']--;
+        }
+
+       /* HashMap<Character,Integer> map=new HashMap<>();
         for(char c:magazine.toCharArray())
         {
             map.put(c,map.getOrDefault(c,0)+1);
@@ -14,7 +29,7 @@ class Solution {
            }       
            map.put(c,map.get(c)-1);
             }
-        
+        */
         return true;
     }
 }
