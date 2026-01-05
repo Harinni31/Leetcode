@@ -1,7 +1,16 @@
 class Solution {
     public boolean detectCapitalUse(String word) {
-        
-        
+        int capitals=0;
+        for(char c:word.toCharArray())
+        {
+            
+            if(Character.isUpperCase(c)) capitals++;
+        }
+        if(capitals==word.length()) return true;
+        if(capitals==0) return true;
+        if(capitals==1 && Character.isUpperCase(word.charAt(0))) return true;
+    return false;
+    /*    
         if(isUpperCase(word)) return true;
         if(isLowerCase(word)) return true;
 
@@ -43,5 +52,7 @@ class Solution {
            
         }
          return true;
+         */
+         
     }
 }
