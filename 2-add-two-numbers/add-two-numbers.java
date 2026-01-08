@@ -10,7 +10,7 @@
  */
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode head1=l1;//reverseList(l1);
+       ListNode head1=l1;//reverseList(l1);
         ListNode head2=l2;//reverseList(l2);
         ListNode dummy=new ListNode(-1);
         ListNode current=dummy;
@@ -35,6 +35,8 @@ class Solution {
        }
        //ListNode result=reverseList(dummy.next);
         return dummy.next;//reverseList(dummy.next);
+        
+  
     }
     private static ListNode reverseList(ListNode head)
     {
