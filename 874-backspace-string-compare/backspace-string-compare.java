@@ -24,7 +24,7 @@ class Solution {
                 sb2.deleteCharAt(sb2.length()-1);
             }
         }
-        if(!sb1.toString().equals(sb2.toString())) return false;
-        return true;
+        //if(!sb1.toString().equals(sb2.toString())) return false;
+        return sb1.toString().equals(sb2.toString());
     }
 }
