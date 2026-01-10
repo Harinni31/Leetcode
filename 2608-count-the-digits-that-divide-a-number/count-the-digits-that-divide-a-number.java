@@ -5,7 +5,7 @@ class Solution {
         while(n>0)
         {
             int rem=n%10;
-            if(num%rem==0) count++;
+            if(rem!=0 && num%rem==0) count++;
             n=n/10;
         }
         return count;
