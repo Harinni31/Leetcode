@@ -1,7 +1,6 @@
 class Solution {
     public boolean checkInclusion(String s1, String s2) {
-        int n=s2.length();
-        int[] freq1=new int[26];
+         int[] freq1=new int[26];
          int[] freq2=new int[26];
         for(char c:s1.toCharArray())
         {
@@ -27,4 +26,4 @@ class Solution {
         }
         return true;
     }
-}
+    }
