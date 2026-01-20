@@ -10,10 +10,10 @@ class Solution {
           
             while(sum>=target)
             {
-                
+                 sum-=nums[left];
                 minlen=Math.min(minlen,right-left+1);
-                sum-=nums[left++];
-                //left++;
+                //sum-=nums[left++];
+                left++;
             }
             
         }
