@@ -5,14 +5,13 @@ class Solution {
         {
             sum+=nums[i];
         }
-        int maxsum=sum;
+        double maxavg=(double)sum/k;
         for(int i=k;i<nums.length;i++)
         {
-            sum+=nums[i];
-            sum-=nums[i-k];
-            maxsum=Math.max(maxsum,sum);
+            sum+=nums[i]-nums[i-k];
+            maxavg=Math.max(maxavg,(double)sum/k);
         }
         
-        return (double) maxsum/k;
+        return maxavg;
     }
 }
