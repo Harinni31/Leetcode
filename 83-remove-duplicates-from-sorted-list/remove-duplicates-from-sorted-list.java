@@ -10,7 +10,25 @@
  */
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-        HashSet<Integer>set=new HashSet<>();
+        /*Core Idea
+
+If the current node and the next node have the same value,
+just skip the next node.*/
+        ListNode current =head;
+        while(current!=null&& current.next!=null)
+        {
+            if(current.val ==current.next.val)
+            {
+                current.next=current.next.next;
+            }
+            else
+            {
+                current=current.next;
+            }
+
+        }
+        return head;
+       /* HashSet<Integer>set=new HashSet<>();
         ListNode temp=head;
         ListNode prev=null;
         while(temp!=null)
@@ -28,6 +46,6 @@ class Solution {
             }
             temp=temp.next;
         }
-        return head;
+        return head;*/
     }
 }
