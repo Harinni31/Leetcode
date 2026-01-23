@@ -21,7 +21,7 @@ class Solution {
             while(i>=0 && s.charAt(i)==' ') i--;//last index before space from end j+1-->i
             int j=i;
             while(j>=0 && s.charAt(j)!=' ') j--;// start index
-            sb.append(s.substring(j+1,i+1));
+            sb.append(s.substring(j+1,i+1));//up to i (because i + 1 is excluded)
             sb.append(" ");
             i=j-1;
         }
