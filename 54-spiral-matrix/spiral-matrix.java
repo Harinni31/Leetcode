@@ -24,16 +24,16 @@ class Solution {
             {
                 list.add(matrix[bottom][i]);
             }
-            bottom--;
             }
+             bottom--;
             if(left<=right)
             {
             for(int j=bottom;j>=top;j--)
             {
                 list.add(matrix[j][left]);
             }
-            left++;
             }
+             left++;
         }
         return list;
     }
