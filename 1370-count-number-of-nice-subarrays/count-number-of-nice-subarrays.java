@@ -11,14 +11,13 @@ class Solution {
         {
             sum+=1;
         }
-        if(sum >= k)
-        {
+       
             if(map.containsKey(sum-k))
             {
                 count+=map.get(sum-k);
             }
             
-        }
+        
         map.put(sum,map.getOrDefault(sum,0)+1);
       }
       return count;
