@@ -1,6 +1,6 @@
 class Solution {
     public String frequencySort(String s) {
-         HashMap<Character,Integer>map=new HashMap<>();
+       HashMap<Character,Integer>map=new HashMap<>();
         List<Character>[] bucket=new ArrayList[s.length()+1];
         //List<Integer>[]: This declares a variable named bucket as an array type. The elements inside this array will be of type List<Integer>.
         
@@ -36,7 +36,6 @@ class Solution {
         }
        
         return sb.toString();
-
-        
+   
     }
 }
