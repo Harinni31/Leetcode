@@ -1,8 +1,31 @@
 class Solution {
     public boolean isHappy(int n) {
+       int slow=n;
+       int fast=n;
+       do
+       {
+        slow=nextno(slow);
+        fast=nextno(nextno(fast));
+       }while (slow!=fast);
        
-       
-       HashSet<Integer>set=new HashSet<>();
+     
+        return slow==1;
+    }
+    private static int nextno(int num)
+    {
+        int sum=0;
+         while(num>0)
+            {
+            int rem=num%10;
+            sum+=rem*rem;
+            num=num/10;
+            }
+           
+            return sum;
+
+    }
+}
+/*  HashSet<Integer>set=new HashSet<>();
        while(n!=1)
        {
         int sum=0;
@@ -25,6 +48,4 @@ class Solution {
 
         }
         
-        return true;
-    }
-}
+        return true;*/
