@@ -12,15 +12,15 @@ class Solution {
             sum+=cardPoints[i];
         }
        // int complement=total-sum;
-        int maxc=total-sum;
-       // int s=n-k;
+        int maxScore=total-sum;
+      
         for(int i=n-k;i<n;i++)
         {
             sum+=cardPoints[i]-cardPoints[i-n+k];
-            maxc=Math.max(maxc,total-sum);
+            maxScore=Math.max(maxScore,total-sum);
 
         }
-       // cmax=Math.max(cmax,sum);
-        return maxc;
+    
+        return maxScore;
     }
 }
