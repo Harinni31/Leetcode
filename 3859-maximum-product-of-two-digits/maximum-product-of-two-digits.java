@@ -24,3 +24,10 @@ class Solution {
         return largest*secondLargest;
     }
 }
+/*
+if (rem > largest) {
+    secondLargest = largest;
+    largest = rem;
+} else if (rem > secondLargest) {
+    secondLargest = rem;
+}*/
