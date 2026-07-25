@@ -3,7 +3,7 @@ class Solution {
         HashMap<Character,Integer> map=new HashMap<>();
         int maxlen=0;
         int left=0;
-    
+    //i denotes right.
         for(int i=0;i<s.length();i++)
         {
             char c=s.charAt(i);
@@ -18,3 +18,32 @@ class Solution {
         return maxlen;
     }
 }
+/*
+import java.util.*;
+public class LongestSubstringLength {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.print("Enter a string: ");
+      String s = sc.nextLine();
+      //return input;
+        int left=0;
+        int maxlength=0;
+        int n=s.length();
+        int[] freq= new int[26];
+      
+        for(int right=0;right<n;right++)
+        {
+            char c=s.charAt(right);
+            freq[c-'a']++;
+            while(freq[c-'a']>1)
+            {
+                freq[s.charAt(left++)-'a']--;
+
+            }
+            maxlength=Math.max(maxlength,right-left+1);
+        }
+        System.out.println(maxlength);
+    }
+}
+
+*/
