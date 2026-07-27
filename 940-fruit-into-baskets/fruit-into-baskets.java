@@ -8,6 +8,38 @@ class Solution {
         for(int right=0;right<fruits.length;right++)
         {
             map.put(fruits[right],map.getOrDefault(fruits[right],0)+1);
+          /*  if(map.get(fruits[right])==1) 
+            {
+               distinct++;
+           
+            }*/
+            while(map.size()>2 && left<=right)
+            {
+                map.put(fruits[left],map.get(fruits[left])-1);
+                if(map.get(fruits[left])==0)
+                {
+                    map.remove(fruits[left]);
+                }
+               /* if(map.get(fruits[left])==0)
+                {
+                   distinct--;
+                }*/
+                left++;
+            }
+            len=Math.max(len,right-left+1);
+        }
+        return len;
+        
+    }
+}
+/*
+ HashMap<Integer,Integer> map=new HashMap<>();
+        int left=0;
+        int distinct=0;
+        int len=0;
+        for(int right=0;right<fruits.length;right++)
+        {
+            map.put(fruits[right],map.getOrDefault(fruits[right],0)+1);
             if(map.get(fruits[right])==1) 
             {
                distinct++;
@@ -25,6 +57,4 @@ class Solution {
             len=Math.max(len,right-left+1);
         }
         return len;
-        
-    }
-}
+        */
