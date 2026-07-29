@@ -34,6 +34,7 @@ class Solution {
                 {
                     formed--;
                 }
+               // window.put(s.charAt(left),window.get(s.charAt(left))-1);
                 left++;
             }
 
