@@ -1,15 +1,15 @@
 class Solution {
     public boolean isHappy(int n) {
-       int slow=n;
-       int fast=n;
-       do
-       {
-        slow=nextno(slow);
-        fast=nextno(nextno(fast));
-       }while (slow!=fast);
-       
-     
-        return slow==1;
+      HashSet<Integer> set=new HashSet<>();
+      int org=n;
+      while(org!=1)
+      {
+        if(set.contains(org)) return false;
+        set.add(org);
+        org=nextno(org);
+
+      }
+      return true;
     }
     private static int nextno(int num)
     {
@@ -36,7 +36,16 @@ class Solution {
 
         set.add(n);
      
-            
+             int slow=n;
+       int fast=n;
+       do
+       {
+        slow=nextno(slow);
+        fast=nextno(nextno(fast));
+       }while (slow!=fast);
+       
+     
+        return slow==1;
             while(n>0)
             {
             int rem=n%10;
